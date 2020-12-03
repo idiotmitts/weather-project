@@ -1,0 +1,108 @@
+body {
+  background-image: linear-gradient(to left, #bdbbbe 0%, #9d9ea3 100%),
+    radial-gradient(
+      88% 271%,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(254, 254, 254, 0.25) 1%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    radial-gradient(
+      50% 100%,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  background-blend-mode: normal, lighten, soft-light;
+  text-align: center;
+  margin: 30px;
+  font-family: "Lobster", cursive;
+}
+h1 {
+  font-size: 60px;
+  margin: 0 20px 20px 20px;
+}
+
+h2,
+h3,
+div i {
+  font-size: 60px;
+}
+h3 span .temperature {
+  font-size: 20px;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+h3 span a {
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+  top: -25px;
+}
+.units {
+  padding: 20px;
+}
+
+h3 span:hover {
+  cursor: pointer;
+  color: rgb(16, 155, 155);
+}
+
+p {
+  font-size: 40px;
+}
+nav {
+  display: inline;
+  background-image: linear-gradient(to left, #bdbbbe 0%, #9d9ea3 100%),
+    radial-gradient(
+      88% 271%,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(254, 254, 254, 0.25) 1%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    radial-gradient(
+      50% 100%,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  font-family: "PT Sans Narrow", sans-serif;
+}
+.btn-outline-success {
+  background-color: white;
+}
+.addtional-info {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+}
+
+div .card {
+  padding: 30px;
+  margin: 30px 0;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+  background-image: linear-gradient(
+    to right,
+    #e4afcb 0%,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #e2c58b 30%,
+    #c2ce9c 64%,
+    #7edbdc 100%
+  );
+}
+
+div .card i {
+  font-size: 50px;
+}
+i {
+  color: rgb(3, 88, 88);
+}
+footer {
+  text-align: center;
+  font-size: 20px;
+}
+footer i {
+  font-size: 20px;
+}
+footer i:hover {
+  cursor: pointer;
+  color: rgb(16, 155, 155);
+}
