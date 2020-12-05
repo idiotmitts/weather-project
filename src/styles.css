@@ -102,6 +102,9 @@ footer {
 footer i {
   font-size: 20px;
 }
+.source-link {
+  text-decoration: none;
+}
 footer i:hover {
   cursor: pointer;
   color: rgb(16, 155, 155);
