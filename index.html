@@ -22,8 +22,8 @@
       href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap"
       rel="stylesheet"
     />
-    <link href="src/styles.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
@@ -31,83 +31,62 @@
       <h1>Anonymous Weather App</h1>
       <br />
 
-      <nav class="navbar navbar-light bg-light">
-        <form class="form-inline" id="city-search-form">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search City"
-            aria-label="Search"
-            id="city-search-input"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
+      <div class="card">
+        <nav class="navbar navbar-light bg-light">
+          <form class="form-inline" id="city-search-form">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search City"
+              aria-label="Search"
+              id="city-search-input"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+          <button
+            type="button"
+            class="btn btn-info"
+            id="current-location-button"
+          >
+            Show Curent Loction
           </button>
-        </form>
-        <button type="button" class="btn btn-info" id="current-location-button">
-          Show Curent Loction
-        </button>
-      </nav>
+        </nav>
 
+        <br />
+
+        <div class="row">
+          <div class="col">
+            <div class="overview">
+              <h2 id="city"></h2>
+              <ul>
+                <li>Last updated: <span id="date"></span></li>
+                <br />
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="clearfix weather-temperature">
+              <img src="" alt="Clear" id="icon" />
+            </div>
+            <div id="description"></div>
+            <strong id="temperature"></strong>
+            <span class="units">
+              <a href="#" id="celsius-link" class="active">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a>
+            </span>
+          </div>
+        </div>
+      </div>
       <br />
 
-      <div class="row">
-        <div class="col-6">
-          <h2 id="current-city">Toronto</h2>
-        </div>
-        <div class="col-6">
-          <p>
-            <spand class="day" id="current-day">Saturday</spand>
-            <span class="time" id="current-time">5pm</span>
-          </p>
-        </div>
-      </div>
+      <div class="row weather-forecast" id="forecast"></div>
 
-      <div class="row">
-        <div class="col-6" class="curent-weather">
-          <h3>
-            <div id="temperature">12ºC</div>
-          </h3>
-          <p class="addtional-info" id="info"></p>
-        </div>
-        <div class="col-6" class="curent-weather">
-          <i class="fas fa-cloud"></i>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="row">
-          <div class="col">Mon</div>
-          <div class="col">Tues</div>
-          <div class="col">Wed</div>
-          <div class="col">Thurs</div>
-          <div class="col">Fri</div>
-        </div>
-
-        <div class="row">
-          <div class="col">14º</div>
-          <div class="col">13º</div>
-          <div class="col">15º</div>
-          <div class="col">15º</div>
-          <div class="col">14º</div>
-        </div>
-        <br />
-        <div class="row">
-          <div class="col"><i class="fas fa-sun"></i></div>
-          <div class="col"><i class="fas fa-cloud-sun"></i></div>
-          <div class="col"><i class="fas fa-wind"></i></div>
-          <div class="col"><i class="fas fa-wind"></i></div>
-          <div class="col"><i class="fas fa-cloud-rain"></i></div>
-        </div>
-        <br />
-        <div class="row">
-          <div class="col">Sunny</div>
-          <div class="col">Partly Cloudly</div>
-          <div class="col">Windy</div>
-          <div class="col">Windy</div>
-          <div class="col">Rain</div>
-        </div>
-      </div>
+      <br />
       <footer>
         <a
           href="https://github.com/idiotmitts/weather-project"
