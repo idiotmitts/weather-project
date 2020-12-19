@@ -138,7 +138,7 @@ function dispalyForecast(response) {
   forecastElement.innerHTML = null;
   let forecast = null;
 
-  for (let index = 0; index < 39; index += 8) {
+  for (let index = 8; index < 39; index += 7) {
     // for (let index = 0; index < 5; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
