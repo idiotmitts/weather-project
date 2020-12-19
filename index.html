@@ -73,12 +73,14 @@
             <div class="clearfix weather-temperature">
               <img src="" alt="Clear" id="icon" />
             </div>
-            <div id="description"></div>
-            <strong id="temperature"></strong>
-            <span class="units">
-              <a href="#" id="celsius-link" class="active">°C</a> |
-              <a href="#" id="fahrenheit-link">°F</a>
-            </span>
+            <div calss="weather-description" id="description"></div>
+            <div class="temp-units">
+              <strong id="temperature"></strong>
+              <span class="units">
+                <a href="#" id="celsius-link" class="active">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -90,13 +92,11 @@
       <footer>
         <a
           href="https://github.com/idiotmitts/weather-project"
+          target="_blank"
           class="source-link"
           >Open-source code</a
         >
         by Emma Semple
-        <span class="instagram"><i class="fab fa-instagram"></i></span>
-        <span class="linkedIn"><i class="fab fa-linkedin-in"></i></span>
-        <span class="gmail"><i class="far fa-envelope"></i></span>
       </footer>
     </div>
     <script src="src/index.js"></script>
