@@ -104,11 +104,17 @@ function showCurrentLocation(position) {
   let apiKey = "3699a6fe3348afa86b71f2515e86a04b";
   let locationUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&&units=${units}`;
   axios.get(locationUrl).then(displayTemperature);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(dispalyForecast);
 }
+
 function showPostion(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showCurrentLocation);
 }
+
+let currentLoctonButton = document.querySelector("#current-location-button");
+currentLoctonButton.addEventListener("click", showPostion);
 
 function formatDateForForecast(timestamp) {
   let date = new Date(timestamp);
@@ -125,14 +131,6 @@ function formatDateForForecast(timestamp) {
   let day = days[date.getDay()];
   return `${day}`;
 }
-
-let currentLoctonButton = document.querySelector("#current-location-button");
-currentLoctonButton.addEventListener("click", showPostion);
-//
-//
-// Forecast code: trying to get 5 day rather than hours
-//
-//
 function dispalyForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
